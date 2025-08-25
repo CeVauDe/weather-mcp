@@ -7,7 +7,6 @@ import uvicorn
 
 # Step 1: Create MCP server instance
 mcp = FastMCP("WeatherMCP", stateless_http=True)
-app = mcp.streamable_http_app()
 
 
 # Step 2: Register your tool
