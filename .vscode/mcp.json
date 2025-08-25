@@ -1,0 +1,14 @@
+{
+	"servers": {
+		"weather_mcp": {
+			"command": "docker",
+			"args": [
+				"run",
+				"-i",
+				"--rm",
+				"cevaude/weather-mcp:0.1.0"
+			]
+		}
+	},
+	"inputs": []
+}

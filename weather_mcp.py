@@ -1,9 +1,13 @@
+import multiprocessing
+import os
 import requests
 from mcp.server.fastmcp import FastMCP
+import uvicorn
 
 
 # Step 1: Create MCP server instance
-mcp = FastMCP("WeatherMCP")
+mcp = FastMCP("WeatherMCP", stateless_http=True)
+app = mcp.streamable_http_app()
 
 
 # Step 2: Register your tool
@@ -41,4 +45,4 @@ def get_weather(city: str):
 
 # Step 3: Run your MCP
 if __name__ == "__main__":
-    mcp.run(transport='stdio')
+    mcp.run()
