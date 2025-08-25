@@ -1,8 +1,5 @@
-import multiprocessing
-import os
 import requests
 from mcp.server.fastmcp import FastMCP
-import uvicorn
 
 
 # Step 1: Create MCP server instance
